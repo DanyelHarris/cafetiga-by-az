@@ -1,0 +1,25 @@
+/* @Jombazar package
+	
+	Placeholder
+-------------------------------------------------------------- */
+
+/* Div-Background */
+%background-gradient{
+	background: rgb(248,80,50);
+	background: -moz-linear-gradient(-45deg, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 91%, rgba(231,56,39,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 91%,rgba(231,56,39,1) 100%);
+	background: linear-gradient(135deg, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 91%,rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=1 );
+}
+
+%text-shadow {text-shadow: 1px 2px 1px #000, 0 0 0 black, -1px 2px 0 #eee, 1px 1px 0 black;}
+
+%column-2 {
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+}
+

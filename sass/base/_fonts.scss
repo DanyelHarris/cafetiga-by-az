@@ -1,0 +1,15 @@
+/* @Jombazar package
+	
+	Fonts
+-------------------------------------------------------------- */
+
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Bubbler+One);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@font-face {font-family: cafefrance; src: local('cafefrance'), url('../fonts/cafefrance.otf') format('truetype'); }
+%font-prime {font-family: cafefrance, Arial, serif; }
+%font-second {font-family: Mr Dafoe, sans-serif; }
+%font-third {font-family: 'Bubbler One', sans-serif; }

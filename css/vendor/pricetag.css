@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+/* common */
+.ribbon {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #760000;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 150px;
+  padding: 11px 0;
+  background-color: #9c0000;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 16px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* top left*/
+.ribbon-top-left {
+  top: -3px;
+  left: 17px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-top-left span {
+  right: -10px;
+  top: 20px;
+  transform: rotate(-45deg);
+}
+
+#menuPrice span, #menuPriceHome span {
+	position: absolute;
+	display: block;
+	width: 180px;
+	padding: 5px 0;
+	color: #fff;
+	font: 700 25px/1 'Lato', sans-serif;
+	text-shadow: 0 3px 5px rgba(0,0,0,.8);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#menuPrice span {
+	bottom: 150px;
+	right: -10px;
+}
+
+#menuPriceHome span {
+	bottom: 90px;
+	right: -10px;
+}

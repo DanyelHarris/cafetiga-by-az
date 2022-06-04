@@ -1,0 +1,310 @@
+/* Gallery Post Formats Style */
+
+#galleryWrap {
+	font-family: 'Montserrat', Helvetica, sans-serif !important;
+	-webkit-font-smoothing: antialiased !important;
+	font-size: 150%;
+	text-indent: 6px;
+	letter-spacing: 12px;
+	text-align: center;
+	font-weight: 200;
+	margin: 0;
+	background: #333;
+}
+
+#rl_pf {
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	-ms-flex-direction: column;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	display: -webkit-box;
+	display: flex;
+}
+.show {
+	-webkit-box-flex: auto;
+	-ms-flex: auto;
+	flex: auto;
+	width: 200px;
+	margin: 0.3vw;
+}
+.show img {
+	width: 100%;
+	height: auto;
+	flex:1;
+}
+
+.iteme {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.iteme .pf_content {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+.iteme img {
+	display: block;
+	position: relative;
+}
+.iteme h2 {
+	color: #fff;
+	font-size: 0.3em;
+	text-indent: 3px;
+	letter-spacing: 6px;
+	text-align: center;
+	font-weight: 200;
+	position: relative;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+.iteme h3 {
+	color: #fff;
+	font-size: 0.25em;
+	text-indent: 1px;
+	letter-spacing: 2px;
+	text-align: center;
+	font-weight: 100;
+	position: relative;
+	text-transform: uppercase;
+}
+.iteme .pf_viewmore {
+	color: #fff;
+	width: 100%;
+	font-size: 0.28em;
+	text-indent: 3px;
+	letter-spacing: 6px;
+	font-weight: 200;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.open-item img {
+	transition: all 1.5s ease;
+}
+.open-item .pf_content {
+	opacity: 0;
+	background-color: rgba(0,0,0,0.8);
+	transition: all 0.4s ease;
+}
+.open-item h2 {
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+.open-item h3 {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+.open-item .pf_viewmore {
+	transform: translateY(30px);
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	opacity: 0;
+	transition: all 1s ease;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.open-item:hover img {
+	transform: scale(1.5);
+}
+.open-item:hover .pf_content {
+	opacity: 1;
+}
+.open-item:hover h2,
+.open-item:hover h3,
+.open-item:hover .pf_viewmore {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.full-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+
+.modalContent {
+	z-index: 1;
+	position: fixed;
+	font-size: 0.3em;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 999;
+	opacity: 0;
+	-webkit-transition: opacity 0.8s ease;
+	-moz-transition: opacity 0.8s ease;
+	transition: opacity 0.8s ease;
+	pointer-events: none;
+}
+.modalContent:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+.modalContent .full-link {
+	cursor: default;
+}
+.modalContent > div {
+	z-index: 5;
+	width: 80vw;
+	height: 80vh;
+	position: relative;
+	margin: 2% auto;
+	padding: 0;
+	background: #fff;
+}
+.close {
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	bottom: 0;
+	left: 0;
+	font-size: 1em;
+	text-indent: 3px;
+	letter-spacing: 6px;
+	font-weight: 200;
+	display: inline-block;
+	background: rgba(0,0,0,0.6);
+	transition: all 0.5s ease;
+}
+.close:hover {
+	background: rgba(0,0,0,0.9);
+	transition: all 0.5s ease;
+}
+.modalDesc {
+	padding: 15px 0 10px 0;
+	margin: 0 auto;
+	font-size: 1em;
+	text-indent: 1px;
+	letter-spacing: 2px;
+	text-align: center;
+	font-weight: 200;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.8);
+}
+.modalDesc p {
+	padding: 0 20px 0 20px;
+	width: 80%;
+	margin: 0 auto;
+}
+.modalDesc h2 {
+	font-size: 1.4em;
+	text-indent: 3px;
+	letter-spacing: 6px;
+	font-weight: 400;
+}
+.modalDesc h3 {
+	font-size: 1em;
+	text-indent: 2px;
+	letter-spacing: 4px;
+	font-weight: 200;
+	padding-bottom: 10px;
+}
+.modalDesc h3 a {
+	text-decoration: none;
+	color: #333;
+	transition: all 0.5s ease;
+}
+.modalDesc h3 a:hover {
+	font-size: 1em;
+	letter-spacing: 8px;
+	text-indent: 4px;
+	transition: all 0.5s ease;
+	text-shadow: 0 5px 4px rgba(0,0,0,1);
+}
+
+@media screen and (max-width: 400px) {
+	#rl_pf {
+		margin: 0;
+		padding: 0;
+	}
+	.modalContent > div {
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+	}
+	.modalDesc p {
+		padding: 0 20px 0 5px;
+		text-align: justify;
+	}
+	.modalDesc h2 {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+	.modalContent > div {
+		margin: 0 auto;
+		width: 90vw;
+		height: 90vh;
+	}
+	.modalDesc p {
+		text-align: justify;
+	}
+	.modalDesc h2 {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .pf_1 > div {
+  background: url('http://placekitten.com/400/250') center;
+  background-size: cover;
+}
+.pf_2 > div {
+  background: url('http://placekitten.com/400/250') center;
+  background-size: cover;
+}
+.pf_3 > div {
+  background: url('http://placekitten.com/400/250') center;
+  background-size: cover;
+}
+.pf_4 > div {
+  background: url('http://placekitten.com/400/250') center;
+  background-size: cover;
+}
+.pf_5 > div {
+  background: url('http://placekitten.com/400/250') center;
+  background-size: cover;
+} */

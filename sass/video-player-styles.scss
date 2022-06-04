@@ -1,0 +1,49 @@
+@import 'base/fonts';
+@import 'base/mixin';
+@import 'base/fonts';
+@import 'base/placeholder';
+
+/** audio player styles **/
+$button-colour: #f77007;
+$button-hover-colour: #d2610a;
+$background: #e0e0e0;
+
+.widget.widget_media_video, #videoContent, .videoloop {
+	.mejs-container {
+		width: 100% !important;
+		@include back-div;
+		@include boxshadow;
+		.mejs-controls { 
+			border-radius: 3px;
+			box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25);
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+
+			.mejs-time-rail {
+				/* change the color of the progress bar */
+				.mejs-time-total {background: #AAC7E3 !important;}
+				
+				/* change the color of the current time bar */
+				.mejs-time-current {
+					background: linear-gradient(270deg, rgb(178, 69, 146), rgb(241, 95, 121)) !important;
+					/* opacity: 0.5; */
+				}
+				
+				/* change the color of the file loading bar */
+				.mejs-time-loaded {
+					background: #ccc !important;
+					width: 100% !important;
+				}
+			}
+			
+			/* use a sprite file with darker transport icons */
+			.mejs-button button {
+				background-image: url('../../img/ico/controls-dark.svg') !important;
+			}
+		}
+
+		.mejs-volume-current, .mejs-volume-handle {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100)) !important;
+			opacity: 0.8;
+		}
+	}
+}

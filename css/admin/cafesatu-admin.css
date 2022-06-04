@@ -1,0 +1,304 @@
+/* @package jombazar */
+/* @package jombazar 
+
+Mixin
+-------------------------------------------------------------- */
+/* a:link, a:visited {
+	color: #500000;
+	text-decoration: none;
+	transition: all 300ms ease 0s;
+	}
+	
+	a:hover, a:focus {
+		text-decoration: none;
+		opacity: 0.5;
+		overflow: hidden;
+	} */
+/* @mixin menuItem {
+	div { 
+		display: flex; 
+		align-items: center; 
+		flex-wrap: wrap; 
+		justify-content:space-around;
+		div { 
+			display: flex; 
+			flex-direction: column; 
+		}
+	}	
+} */
+/* @package jombazar 
+
+Skin
+-------------------------------------------------------------- */
+/* @Jombazar package
+	
+	Fonts
+-------------------------------------------------------------- */
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Bubbler+One);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@font-face {
+  font-family: cafefrance;
+  src: local("cafefrance"), url("../fonts/cafefrance.otf") format("truetype"); }
+/* @Jombazar package
+	
+	Placeholder
+-------------------------------------------------------------- */
+/* Div-Background */
+.column-2 {
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  column-count: 2;
+  column-gap: 10px; }
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+/*********************************/
+/*   GENERIC STYLE            		 */
+/*********************************/
+label {
+  font-weight: bold; }
+
+code {
+  background: white;
+  color: #9933CC; }
+
+.text-danger {
+  color: #ff4444; }
+
+.text-warning {
+  color: #ffbb33; }
+
+.text-success {
+  color: #00C851; }
+
+.text-info {
+  color: #33b5e5; }
+
+.block-danger {
+  background-color: #ff4444;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
+
+.block-warning {
+  background-color: #ffbb33;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
+
+.block-success {
+  background-color: #00C851;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
+
+.block-info {
+  background-color: #33b5e5;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
+
+.divTable {
+  display: table;
+  width: 100%; }
+
+.divTableRow {
+  display: table-row; }
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group; }
+
+.divTableCell {
+  display: table-cell;
+  padding: 3px 10px; }
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: bold; }
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold; }
+
+.divTableBody {
+  display: table-row-group; }
+
+.col-10 {
+  width: 80%; }
+
+.col-8 {
+  width: 60%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-4 {
+  width: 40%; }
+
+.col-2 {
+  width: 20%; }
+
+.clearboth {
+  clear: both; }
+
+.blink {
+  animation: blinker 1s linear infinite; }
+
+@keyframes blinker {
+  50% {
+    opacity: 0; } }
+/*********************************/
+/*   PAGE STYLE            		 */
+/*********************************/
+/*++++ Post.php Page style ++++*/
+.wrap#postWrap .bzbr001-post-form .stv-switch {
+  clear: both; }
+.wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch {
+  position: absolute;
+  left: -99999px;
+  top: -99999px; }
+  .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch + label {
+    font-weight: normal;
+    position: relative;
+    float: left;
+    line-height: 1.6em;
+    height: 1.6em;
+    padding-left: 3.5em;
+    margin: 0.2em 0;
+    cursor: pointer; }
+    .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch + label::before, .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch + label::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      line-height: 1em;
+      -webkit-transition: all 0.1s cubic-bezier(0.72, 0.21, 0.95, 0.64);
+      transition: all 0.1s cubic-bezier(0.72, 0.21, 0.95, 0.64); }
+    .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch + label::before {
+      width: 3em;
+      top: 0;
+      bottom: 0;
+      background-color: #ff4242;
+      border-radius: 1em;
+      box-shadow: inset 0.13em 0.13em 0.2em rgba(0, 0, 0, 0.3); }
+    .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch + label::after {
+      width: 1.4em;
+      top: 0.1em;
+      bottom: 0.1em;
+      margin-left: 0.1em;
+      border-radius: 50%;
+      background-color: #fff; }
+  .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch:checked + label::before {
+    background: #13cd4a; }
+  .wrap#postWrap .bzbr001-post-form input.stv-checkbox-switch:checked + label::after {
+    margin-left: 1.5em; }
+
+/*# sourceMappingURL=cafesatu-admin.css.map */

@@ -1,0 +1,100 @@
+@import 'base/fonts';
+
+/** audio player styles **/
+$button-colour: #f77007;
+$button-hover-colour: #d2610a;
+$background: #e0e0e0;
+
+.widget.widget_media_audio, #audioContent {
+	text-align: center;
+	h1 {@extend %font-prime;
+		position: absolute;
+		top: 310px;
+		left: 550px;
+		z-index:10;
+		font-size: 3em;
+		color:white;
+	}
+	height: 280px ;
+	.mejs-container {
+		height: 280px !important;
+		background: transparent;
+	
+		.mejs-controls {
+			height: 285px;
+			width: 100%;
+			text-align: center;
+			display: inline-block;
+			float: left;
+			background: transparent;
+		
+			/* play/pause control */
+			.mejs-button.mejs-playpause-button{
+				&:focus {outline: none !important; }
+				&.mejs-play{
+					width: 100px;
+					height: 205px;
+					background-color: transparent;
+					position: relative;
+					button {
+						background-image: url('../../img/ico/music-player.svg') !important;
+						width: 80px;
+						height: 80px;
+						border: none;
+						&:focus {outline: none; }
+						&:hover {cursor: pointer;}	
+					}
+				}
+				&.mejs-pause {
+					background-image: url('../../img/ico/pause.svg') !important;
+				}
+			}
+			
+			.mejs-time.mejs-currenttime-container {
+				position: relative;
+				& span.mejs-currenttime {display: none;}
+			} 
+			
+			.mejs-time-rail {
+				width: 100%;
+				height: 100%;
+				span.mejs-time-slider{
+					height: 50px;
+					background-color: white;
+					span.mejs-time-loaded {}
+					.mejs-time-loaded {
+						background: url('../../img/ico/wavebg.png') no-repeat top center !important;
+						width: 100% !important;
+						height: 270px !important;
+					}
+					.mejs-time-current {
+						background: #000 !important;
+						opacity: 0.2 !important;
+						height: 270px;
+					}
+					.mejs-time-float {}
+				}
+				.mejs-time-total {background: transparent !important;}
+			}
+			
+			.mejs-time.mejs-duration-container {
+				span.mejs-duration{display:none;}
+			}
+		
+			.mejs-button.mejs-volume-button.mejs-mute, .mejs-unmute{
+				position:relative;
+				button {
+					position:absolute;
+					top:50px;
+				}
+			}
+			
+			.mejs-horizontal-volume-slider.mejs-mute,
+			.mejs-horizontal-volume-slider.mejs-unmute {visibility: hidden;
+				.mejs-horizontal-volume-total{}
+				.mejs-horizontal-volume-current{}
+				.mejs-horizontal-volume-handle{}
+			}
+		}
+	}
+}

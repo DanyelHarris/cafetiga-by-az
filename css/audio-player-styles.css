@@ -1,0 +1,89 @@
+/* @Jombazar package
+	
+	Fonts
+-------------------------------------------------------------- */
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Bubbler+One);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@font-face {
+  font-family: cafefrance;
+  src: local("cafefrance"), url("../fonts/cafefrance.otf") format("truetype"); }
+.widget.widget_media_audio h1, #audioContent h1 {
+  font-family: cafefrance, Arial, serif; }
+
+/** audio player styles **/
+.widget.widget_media_audio, #audioContent {
+  text-align: center;
+  height: 280px; }
+  .widget.widget_media_audio h1, #audioContent h1 {
+    position: absolute;
+    top: 310px;
+    left: 550px;
+    z-index: 10;
+    font-size: 3em;
+    color: white; }
+  .widget.widget_media_audio .mejs-container, #audioContent .mejs-container {
+    height: 280px !important;
+    background: transparent; }
+    .widget.widget_media_audio .mejs-container .mejs-controls, #audioContent .mejs-container .mejs-controls {
+      height: 285px;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      background: transparent;
+      /* play/pause control */ }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button:focus, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button:focus {
+        outline: none !important; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play {
+        width: 100px;
+        height: 205px;
+        background-color: transparent;
+        position: relative; }
+        .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button {
+          background-image: url("../../img/ico/music-player.svg") !important;
+          width: 80px;
+          height: 80px;
+          border: none; }
+          .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button:focus, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button:focus {
+            outline: none; }
+          .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button:hover, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-play button:hover {
+            cursor: pointer; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-pause, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-playpause-button.mejs-pause {
+        background-image: url("../../img/ico/pause.svg") !important; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time.mejs-currenttime-container, #audioContent .mejs-container .mejs-controls .mejs-time.mejs-currenttime-container {
+        position: relative; }
+        .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time.mejs-currenttime-container span.mejs-currenttime, #audioContent .mejs-container .mejs-controls .mejs-time.mejs-currenttime-container span.mejs-currenttime {
+          display: none; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time-rail, #audioContent .mejs-container .mejs-controls .mejs-time-rail {
+        width: 100%;
+        height: 100%; }
+        .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider, #audioContent .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider {
+          height: 50px;
+          background-color: white; }
+          .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider .mejs-time-loaded, #audioContent .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider .mejs-time-loaded {
+            background: url("../../img/ico/wavebg.png") no-repeat top center !important;
+            width: 100% !important;
+            height: 270px !important; }
+          .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider .mejs-time-current, #audioContent .mejs-container .mejs-controls .mejs-time-rail span.mejs-time-slider .mejs-time-current {
+            background: #000 !important;
+            opacity: 0.2 !important;
+            height: 270px; }
+        .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total, #audioContent .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
+          background: transparent !important; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-time.mejs-duration-container span.mejs-duration, #audioContent .mejs-container .mejs-controls .mejs-time.mejs-duration-container span.mejs-duration {
+        display: none; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-volume-button.mejs-mute, .widget.widget_media_audio .mejs-container .mejs-controls .mejs-unmute, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-volume-button.mejs-mute, #audioContent .mejs-container .mejs-controls .mejs-unmute {
+        position: relative; }
+        .widget.widget_media_audio .mejs-container .mejs-controls .mejs-button.mejs-volume-button.mejs-mute button, .widget.widget_media_audio .mejs-container .mejs-controls .mejs-unmute button, #audioContent .mejs-container .mejs-controls .mejs-button.mejs-volume-button.mejs-mute button, #audioContent .mejs-container .mejs-controls .mejs-unmute button {
+          position: absolute;
+          top: 50px; }
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-horizontal-volume-slider.mejs-mute,
+      .widget.widget_media_audio .mejs-container .mejs-controls .mejs-horizontal-volume-slider.mejs-unmute, #audioContent .mejs-container .mejs-controls .mejs-horizontal-volume-slider.mejs-mute,
+      #audioContent .mejs-container .mejs-controls .mejs-horizontal-volume-slider.mejs-unmute {
+        visibility: hidden; }
+
+/*# sourceMappingURL=audio-player-styles.css.map */

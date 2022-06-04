@@ -1,0 +1,67 @@
+/*-------------------------------*/
+/*      Code snippet by          */
+/*      @maridlcrmn              */
+/*-------------------------------*/
+
+
+section#carousel {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+.quote {margin-top: 40px;}
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  height: 300px;
+/*   width: 850px; */
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #e84a64;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    /* border-radius: 100px; */
+}
+
+#fade-quote-carousel .profile-circle img{
+	width: 50px;
+	height: 50px;
+}
+
+#fade-quote-carousel span.client{
+	font-size: 14px;
+	font-style: italic;
+}
